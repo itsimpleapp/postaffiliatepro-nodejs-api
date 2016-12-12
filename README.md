@@ -27,7 +27,7 @@ postaffiliatepro.programs(function(err, result){
     console.log(result[0].rows);
 });
 
-postaffiliatepro.report("2016-12-01", "2016-12-12", function(err, result){
+postaffiliatepro.report("2016-12-01", "2016-12-12", "A", function(err, result){
     console.log(result);
 });
 

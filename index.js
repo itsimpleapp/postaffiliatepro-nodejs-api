@@ -163,9 +163,10 @@ module.exports = function(serverurl, loginurl, user, pass){
          * 
          * @param string datestart Query start date in AAAA-MM-DD format
          * @param string dateend Query end date in AAAA-MM-DD format
+         * @param string status Sale status (A = Approved, D = Denied, P = Pending)
          * @param function cb
          */
-        report: function(datestart, dateend, cb){
+        report: function(datestart, dateend, status, cb){
             var _this = this;
             
             this.getsession(() => {
@@ -177,7 +178,7 @@ module.exports = function(serverurl, loginurl, user, pass){
                                         "M": "loadData",
                                         "isInitRequest": "N",
                                         "filterType": "trends_report",                                        
-                                        "filters":[["datetime","D>=",datestart],["datetime","D<=",dateend],["rpc","=","Y"],["groupBy","=","day"],["dataType1","=","saleCount"],["dataType2","=","clickCountall"],["rstatus","IN","A,D,P"]]
+                                        "filters":[["datetime","D>=",datestart],["datetime","D<=",dateend],["rpc","=","Y"],["groupBy","=","day"],["dataType1","=","saleCount"],["dataType2","=","clickCountall"],["rstatus","IN",status]]
                                     }],
                                     "S": _this.session
                                 })};

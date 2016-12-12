@@ -178,7 +178,7 @@ module.exports = function(serverurl, loginurl, user, pass){
                                         "M": "loadData",
                                         "isInitRequest": "N",
                                         "filterType": "trends_report",                                        
-                                        "filters":[["datetime","D>=",datestart],["datetime","D<=",dateend],["rpc","=","Y"],["groupBy","=","day"],["dataType1","=","saleCount"],["dataType3","=","saleCommission"],["rstatus","IN",status]]
+                                        "filters":[["datetime","D>=",datestart],["datetime","D<=",dateend],["rpc","=","Y"],["groupBy","=","day"],["dataType1","=","saleCount"],["dataType2","=","saleCommission"],["rstatus","IN",status]]
                                     }],
                                     "S": _this.session
                                 })};

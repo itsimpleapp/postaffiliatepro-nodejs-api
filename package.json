@@ -1,6 +1,6 @@
 {
     "name": "postaffiliatepro-api",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "API integration with Post Affiliate Pro",
     "author": "André Ferreira <andrehrf@gmail.com>",
     "main": "index.js",
